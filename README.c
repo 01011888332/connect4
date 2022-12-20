@@ -1,26 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-char place[5][7];
-int Width=7,Height=5;
+char place[8][7];
+int Height=8,Width=7;
 char disc='X';
 int col=0;
 void start(){
-    for(int i=0;i<Width;i++){
-        for(int j=0;j<=Height;j++){
+    int i,j;
+    for(i=0;i<Height;i++){
+        for(j=0;j<Width;j++){
             place[i][j]=' ';
         }
     }
 }
-
+void pick(){
+    int i;
+    while(1){
+        printf("choose column\n");
+        scanf("%d",&i);
+        if(i<Width+1&&i>=0){
+            col=i-1;
+        }
+        else{
+            printf("Enter a correct number\n\n\n");
+            col=-1;
+        }
+        if(place[0][col]==' '){
+            fillCol();
+            disc = (disc == 'X') ? 'O' : 'X';
+            break;
+        }
+        boardd();
+    }
+}
 void fillCol(){
-    for(int i=Height-1;i>=0;i--){
+    int i;
+    for(i=Height-1;i>=0;i--){
         if(place[i][col]==' '){
             place[i][col]=disc;
             break;
         }
     }
 }
-
 void enterance(){
     int mode;
     printf("choose your mode:\n\n");
@@ -39,25 +59,31 @@ int modeNumber(int x){
         printf("Enter the right number");
     }
 }
-
-void boardd(int Width,int Height){
+void boardd(){
     int i,j;
     for(i =0;i<Height;i++){
         for(j=0;j<Width;j++){
             printf("|---|");
         }
         printf("\n");
-        for(int x=0;x<Width;x++){
+        for(j=0;j<Width;j++){
             printf("| %c |",place[i][j]);
         }
         printf("\n");
     }
-    for(int y=0;y<Height;y++){
-        printf("-------");
+    for(int y=0;y<Width;y++){
+        printf("-----");
     }
+    printf("\n");
 }
 
 int main(){
-    boardd(Width,Height);
+    start();
+    boardd();
+    while(1){
+        pick();
+        printf("\n\n\n");
+        boardd();
+    }
     return 0;
 }
