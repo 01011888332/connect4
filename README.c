@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+char place[5][7];
 int Width=7,Height=5;
-char place[Width][Height];
 char disc='X';
 int col=0;
 void start(){
