@@ -1,3 +1,4 @@
+//دي حركه دي حركه دي حركه
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
