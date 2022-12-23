@@ -64,7 +64,7 @@ void fillCol()
         /*score_in_row(Width-1,row_to_be_checked,&scores1);
         /*column score*/
         /*score_in_coloumn(Height-1,col-1,&scores1);*/
-        score_in_row(row_to_be_checked,col-1,&scores1);
+       score_in_row(row_to_be_checked,col-1,&scores1);
         score_in_coloumn(row_to_be_checked,col-1,&scores1);
 
 
@@ -128,7 +128,7 @@ void boardd()
 }
 void score_in_row(int row,int coloumn,int*score)
 {
-    int counter=0;
+  int counter=0;
     if(coloumn+3<=Width-1&&coloumn-3>=0)
     {
         for(int i=coloumn-3; i<=coloumn+3; i++)
@@ -140,7 +140,7 @@ void score_in_row(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
@@ -162,7 +162,7 @@ void score_in_row(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
@@ -184,7 +184,7 @@ void score_in_row(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
@@ -216,7 +216,7 @@ void score_in_coloumn(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
@@ -238,7 +238,7 @@ void score_in_coloumn(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
@@ -260,7 +260,7 @@ void score_in_coloumn(int row,int coloumn,int*score)
                     counter++;
                     if(counter==4)
                     {
-                        *score++;
+                        (*score)++;
                         counter=0;
                     }
                 }
