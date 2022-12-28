@@ -1,3 +1,4 @@
+//دي حركه دي حركه دي حركه
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -270,4 +271,82 @@ void diagonal2_score(int* s){
             }
         }
     }
+
+}
+/*void score_in_row(int moving_direction,int constant_position,int *Score)
+{
+    int counter=0;
+    for(int i=moving_direction; i>=0; i--)
+    {
+        if(place[constant_position][i]==disc)
+        {
+            counter++;
+            if(counter==4)
+            {
+                *Score++;
+                counter=0;
+            }
+        }
+        else
+        {
+            counter=0;
+        }
+    }
+}
+void score_in_coloumn(int moving_direction,int constant_position,int *Score)
+{
+    int counter=0;
+    for(int i=moving_direction; i>=0; i--)
+    {
+        if(place[i][constant_position]==disc)
+        {
+            counter++;
+            if(counter==4)
+            {
+                *Score++;
+                counter=0;
+            }
+        }
+        else
+        {
+            counter=0;
+        }
+    }
+
+}
+void score_in_diagonal(int horizontal,int vertical,int *Score){
+    int counter=0;
+    int p;
+    int j= vertical;
+    for(int i=horizontal;i<width;i++){
+            p=i;
+        if(place[i][j]==disc){
+                counter++;
+        }
+    if(place[i-1][j-1]==dics){
+        counter++;
+    }
+    if(counter==4){
+        *score++;
+        counter=0;
+    }
+
+
+    }
+
+
+}*/
+int main()
+{
+    start();
+    boardd();
+    while(1)
+    {
+        pick();
+        printf("\n\n\n");
+        boardd();
+    }
+    return 0;
+    //hhhh
+
 }
